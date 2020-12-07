@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="picture1">
+            <img id="pic1" style="width: 700px; height: 300px;" alt="field" src="images/image1.jpg" />
+            <br><br>
+            <button type="button" id="toggleBtn">Hide/Show</button>
+        </div>
+        <br><br>
+        <div>
+            <h3>Tooltip with jQuery</h3>
+            <p>Hover mouse over button then move away</p>
+            <button type="button" data-toggle="tooltipBtn" title="This is a tooltip!">Hover over me</button>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                $('#toggleBtn').click(function () {
+                    $('#pic1').toggle(500);
+                });
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        </script>
+    </body>
+</html>
